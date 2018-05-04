@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ventana Principal-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="VentanaPrincipal" customModule="aplicacion_deUnaVentana" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esta es la ventana principal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jua-RU-oW2">
+                                <rect key="frame" x="67" y="20" width="240.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de personas añadidas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC9-Dd-psw">
+                                <rect key="frame" x="16" y="61" width="238" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeA-GF-lKe">
+                                <rect key="frame" x="307" y="61" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color de fondo verde:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCv-Jv-c8x">
+                                <rect key="frame" x="16" y="197" width="166" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CCO-zx-VA9">
+                                <rect key="frame" x="310" y="192" width="51" height="31"/>
+                                <connections>
+                                    <action selector="activar_desactivar_ColorDeFondo:" destination="BYZ-38-t0r" eventType="valueChanged" id="mwS-He-SXr"/>
+                                </connections>
+                            </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iAP-nK-ouc">
+                                <rect key="frame" x="67" y="299" width="240" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="FwC-g3-vqg"/>
+                                    <constraint firstAttribute="height" constant="140" id="bkk-rE-E42"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Una imagen diferente:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eO-qL-s7Z">
+                                <rect key="frame" x="103" y="258" width="169" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHH-D4-c4e">
+                                <rect key="frame" x="136" y="122" width="103" height="35"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <state key="normal" title="Añadir uno"/>
+                                <connections>
+                                    <action selector="agregarUnaPersona:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8FR-es-L6n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWb-zW-UNN">
+                                <rect key="frame" x="116" y="459" width="144" height="35"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <state key="normal" title="Ocultar imagen"/>
+                                <connections>
+                                    <action selector="ocultar_mostrarImagen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Mf-vM-Q6w"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3eO-qL-s7Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5S7-A2-4sj"/>
+                            <constraint firstItem="DeA-GF-lKe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5oP-HS-rm4"/>
+                            <constraint firstItem="CCO-zx-VA9" firstAttribute="centerY" secondItem="yCv-Jv-c8x" secondAttribute="centerY" id="9DS-sQ-y8O"/>
+                            <constraint firstItem="DeA-GF-lKe" firstAttribute="centerY" secondItem="LC9-Dd-psw" secondAttribute="centerY" id="9KI-qF-BHz"/>
+                            <constraint firstItem="LC9-Dd-psw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GcF-sc-LS3"/>
+                            <constraint firstItem="yCv-Jv-c8x" firstAttribute="top" secondItem="bHH-D4-c4e" secondAttribute="bottom" constant="40" id="HCv-al-0ZZ"/>
+                            <constraint firstItem="KWb-zW-UNN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JnX-xP-hwZ"/>
+                            <constraint firstItem="bHH-D4-c4e" firstAttribute="top" secondItem="LC9-Dd-psw" secondAttribute="bottom" constant="40" id="LXo-Qz-dtG"/>
+                            <constraint firstItem="iAP-nK-ouc" firstAttribute="top" secondItem="3eO-qL-s7Z" secondAttribute="bottom" constant="20" id="N5w-7y-hVy"/>
+                            <constraint firstItem="CCO-zx-VA9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="U9z-aR-BDs"/>
+                            <constraint firstItem="DeA-GF-lKe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LC9-Dd-psw" secondAttribute="trailing" id="Wvv-Ct-fzx"/>
+                            <constraint firstItem="LC9-Dd-psw" firstAttribute="top" secondItem="Jua-RU-oW2" secondAttribute="bottom" constant="20" id="clm-SX-cXJ"/>
+                            <constraint firstItem="CCO-zx-VA9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yCv-Jv-c8x" secondAttribute="trailing" id="d0O-ai-oq3"/>
+                            <constraint firstItem="yCv-Jv-c8x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fAz-Zg-W3K"/>
+                            <constraint firstItem="bHH-D4-c4e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hbe-Wd-MOA"/>
+                            <constraint firstItem="iAP-nK-ouc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lLn-rv-lP3"/>
+                            <constraint firstItem="Jua-RU-oW2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vMH-4O-HpO"/>
+                            <constraint firstItem="KWb-zW-UNN" firstAttribute="top" secondItem="iAP-nK-ouc" secondAttribute="bottom" constant="20" id="wCX-cp-l15"/>
+                            <constraint firstItem="Jua-RU-oW2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wJo-Qt-s5v"/>
+                            <constraint firstItem="3eO-qL-s7Z" firstAttribute="top" secondItem="yCv-Jv-c8x" secondAttribute="bottom" constant="40" id="yZl-M0-yqB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imagen" destination="iAP-nK-ouc" id="bN2-8W-iSZ"/>
+                        <outlet property="numero_dePersonas" destination="DeA-GF-lKe" id="zbG-lw-4JA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
